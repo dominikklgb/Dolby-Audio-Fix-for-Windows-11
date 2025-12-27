@@ -37,7 +37,7 @@ After a **Windows 11 24H2+ clean installation or reset**, you install **Dolby Ac
 
 Microsoft **removed Dolby AC-3/AC-4 codec decoders** from Windows 11 24H2+ default installations to reduce OS size. However:
 
-1. **Dolby Access** = Configuration app only (no decoders)
+1. **Dolby Access** = Configuration app only (no decoders) - well, not always working for everyone
 2. **Codecs** = Actual audio decoders (separate install)
 
 Dolby Access without the system codecs is like having a Netflix app without internet—it can't function.
