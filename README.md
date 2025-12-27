@@ -59,7 +59,7 @@ After Windows 11 24H2+ reset:
 
 **Root cause:** Windows 11 24H2+ removed built-in Dolby AC-3/AC-4 decoders. Dolby Access is just the config app—the actual decoders must be installed separately.
 
-**Time to fix:** 5-30 minutes depending on your system
+**Time to fix:** 5-15 minutes
 
 ---
 
@@ -68,18 +68,6 @@ After Windows 11 24H2+ reset:
 Download [Shark007's Dolby AC-3/AC-4 installer](https://www.majorgeeks.com/files/details/dolby_ac_3ac_4_installer.html), run it, configure Dolby Access to "Theatre" mode, clear Netflix cache, reboot, and test.
 
 **For full details:** See [GUIDE.md](./GUIDE.md)
-
----
-
-## 🎓 Why Read This Guide?
-
-| Aspect | Why This Guide | Typical Solutions |
-|--------|---|---|
-| **Accuracy** | Written by someone who spent 1+ year debugging this | Generic "reinstall audio drivers" advice |
-| **Completeness** | Covers every failure mode we've documented | Single workaround, no explanation |
-| **Visual** | Step-by-step with expandable sections | Text walls, outdated forum posts |
-| **Tested** | Validated on Windows 11 builds 22621 → 26100+ | Untested assumptions |
-| **Current** | Updated for 24H2 codec removal | References Windows 10 or old 11 versions |
 
 ---
 
@@ -106,26 +94,6 @@ Found a working solution for an edge case? Improved a step?
 3. **Discuss in Discussions** tab for ideas
 
 See [CONTRIBUTING.md](./CONTRIBUTING.md) for guidelines.
-
----
-
-## 💬 How People Are Using This
-
-> *"Been stuck on this for a year. 15 minutes and it's fixed. Thank you."* — Reddit user
-
-> *"The 'Theatre' vs 'Home Cinema' explanation finally makes sense."* — Windows forum
-
-> *"Saved me before a presentation. Dolby working perfectly now."* — Twitter
-
----
-
-## 📊 Quick Stats
-
-- **Tests Performed:** 50+ configurations
-- **Platforms Tested:** Windows 11 22H2 → 24H2
-- **Success Rate:** ~98% (remaining 2% have hardware incompatibilities)
-- **Average Fix Time:** 12 minutes
-- **GitHub Stars:** ⭐ [Help us grow!]
 
 ---
 
