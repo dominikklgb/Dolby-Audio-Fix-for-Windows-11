@@ -54,36 +54,20 @@ Dolby Access without the system codecs is like having a Netflix app without inte
 Run this diagnostic to confirm the issue:
 
 <details>
-<summary><b>Click to expand: How to diagnose your system</b></summary>
+<summary><b>Click to expand: How to diagnose your problem</b></summary>
 
-### Method 1: Audio Format Detection (Fastest)
+### Method : Using Netflix
 
 1. Open **Settings** → **System** → **Sound**
 2. Scroll down → **Volume mixer**
-3. Play any **Dolby Atmos content on Netflix**
-4. Check the audio format shown:
-   - ✅ Shows "Dolby Atmos" or "AC-3" = Codecs installed
+3. On spatial sound settings, select **Dolby Atmos for Home Cinema**
+4. Play any **Dolby Atmos content on Netflix**
+5. Check the audio format shown:
+   - ✅ Shows "Dolby Atmos" or "5.1+" = Codecs installed
    - ❌ Shows "PCM" or nothing = **Codecs missing** (this is you)
 
-### Method 2: Dolby Access Verification
+If it is possible on your AV Receiver, enable output signal info to see if DTS is used or simply PCM ( or nothing )
 
-1. Open **Dolby Access** app
-2. Try to enable any Dolby feature
-3. Result:
-   - ✅ Settings apply, audio changes = Working
-   - ❌ Settings stay grayed out or crash = **Missing codecs**
-
-### Method 3: Windows PowerShell (Advanced)
-
-```powershell
-Get-AppxPackage -Name "*Dolby*"
-```
-
-If this returns empty = Dolby Access isn't installed at all (install from Microsoft Store first).
-
-</details>
-
----
 
 ## ✅ Solution (Step by Step)
 
@@ -127,13 +111,11 @@ This is where most people fail. The exact sequence matters.
 2. **Look for the audio profile selector** (usually top section):
    - You might see options like:
      - "Dolby for Cinema"
-     - "Dolby for Theatre"
+     - "Dolby for Home Theatre"
      - "Dolby for Home Cinema"
      - "Dolby for Gaming"
 
-3. **Select "Dolby for Theatre"**
-   - ⚠️ **NOT "Dolby for Home Cinema"** (causes audio compression artifacts)
-   - ⚠️ **NOT "Dolby for Gaming"** (may not work with Netflix)
+3. **Select "Dolby for Home Theatre"**
 
 4. **Click Apply/Save**
 
@@ -149,14 +131,9 @@ This is where most people fail. The exact sequence matters.
    ```
    - Press `Win+R` → paste above path
    - **Delete everything in this folder** (Netflix will recreate it)
+   - You can also directly do this inside the Netflix App options
 
-#### Step 2.3: Reboot Windows
-
-- **Restart your PC**
-- This forces Windows to refresh audio device detection
-- On boot, Netflix will re-scan your audio capabilities
-
-#### Step 2.4: Test with Netflix
+#### Step 2.3: Test with Netflix
 
 1. **Open Netflix**
 2. **Play a show with Dolby Atmos** (see list below)
@@ -168,13 +145,13 @@ This is where most people fail. The exact sequence matters.
 
 ### Phase 3: Fine-Tune (Optional but Recommended)
 
-#### Step 3.1: Disable Home Cinema (If Needed)
+#### Step 3.1: Disable Home Cinema/Theatre (If Needed)
 
 If you notice audio sounds compressed or bass-heavy:
 
-1. Open **Dolby Access**
-2. Find the audio preset section
-3. **Uncheck "Dolby for Home Cinema"** or switch to "Dolby for Theatre"
+1. In surround sound options, switch to standard.
+2. Windows + R, write mmsys.cpl, right click on your speakers, and configure 5.1+
+3. If you had an error, do it a second time. It should work
 4. This preserves DTS and native audio quality
 
 #### Step 3.2: Disable Upsampling
@@ -193,15 +170,6 @@ To avoid audio quality degradation:
 
 ## 📖 Detailed Configuration
 
-### Dolby Profiles Explained
-
-| Profile | Best For | Audio Style | Notes |
-|---------|----------|-------------|-------|
-| **Theatre** | Netflix, Movies | Neutral, cinematic | ✅ **Recommended** |
-| **Home Cinema** | Older content | Compressed, boosted bass | ❌ Avoid for Netflix |
-| **Gaming** | Games with Dolby | Dynamic, explosive | Limited Netflix support |
-| **Cinema** | Archival | Reference, flat | Not for streaming |
-
 ### Netflix Content with Dolby Atmos
 
 Test with these titles (may vary by region):
@@ -212,8 +180,6 @@ Test with these titles (may vary by region):
 - 🎬 **Money Heist** (Spanish dub has Atmos)
 - 🎬 **Squid Game** (select episodes)
 - 🎬 **Avatar: The Last Airbender** (live action)
-
-**Pro tip:** Search "Dolby Atmos" in Netflix to find compatible content.
 
 ---
 
