@@ -1,0 +1,36 @@
+# Git configuration for Dolby Audio Fix repository
+
+# OS-generated files
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+
+# IDE/Editor files
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# Temporary files
+*~
+*.tmp
+*.bak
+.#*
+
+# Build artifacts (if any)
+dist/
+build/
+*.egg-info/
+
+# Dependencies (if using Node, Python, etc.)
+node_modules/
+venv/
+__pycache__/
+
+# Logs
+*.log
+
+# OS junk
+.AppleDouble
+.LSOverride
