@@ -4,7 +4,7 @@
 
 [![License: CC-BY-4.0](https://img.shields.io/badge/License-CC%20BY%204.0-lightblue.svg)](https://creativecommons.org/licenses/by/4.0/)
 ![Platform: Windows 11 24H2+](https://img.shields.io/badge/Platform-Windows%2011%2024H2%2B-blue)
-![Status: Incomplete](https://img.shields.io/badge/Status-Complete-brightgreen](https://img.shields.io/badge/Status-Incomplete-red))
+![Status: Incomplete]((https://img.shields.io/badge/Status-Incomplete-red))
 
 ---
 
